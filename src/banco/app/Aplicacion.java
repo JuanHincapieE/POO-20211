@@ -9,14 +9,14 @@ public class Aplicacion {
         Persona sebastian = new Persona();
         Persona alejandro = new Persona();
 
-        CuentaBancaria miCuenta = new CuentaBancaria();
+        CuentaBancaria cuentaSebastian = new CuentaBancaria();
         CuentaBancaria cuentaAlejandro = new CuentaBancaria();
 
         sebastian.nombre = "Sebastian";
-        miCuenta.titular = sebastian;
-        miCuenta.saldo = 500000;
-        miCuenta.consultarSaldo();
-        miCuenta.estado = "Activa";
+        cuentaSebastian.titular = sebastian;
+        cuentaSebastian.saldo = 500000;
+        cuentaSebastian.consultarSaldo();
+        cuentaSebastian.estado = "Activa";
 
 
         alejandro.nombre = "Alejandro";
@@ -26,13 +26,13 @@ public class Aplicacion {
         cuentaAlejandro.estado = "Activa";
 
 
-        System.out.println(miCuenta.consultarSaldo());
+        System.out.println(cuentaSebastian.consultarSaldo());
         System.out.println(cuentaAlejandro.consultarSaldo());
 
-        boolean resultadoTransferencia = miCuenta.transferir(35000,cuentaAlejandro);
+        boolean resultadoTransferencia = cuentaSebastian.transferir(35000,cuentaAlejandro);
 
         System.out.println(resultadoTransferencia);
-        System.out.println(miCuenta.consultarSaldo());
+        System.out.println(cuentaSebastian.consultarSaldo());
         System.out.println(cuentaAlejandro.consultarSaldo());
 
 
